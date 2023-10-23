@@ -1,6 +1,6 @@
 export const projects = [
     {
-        img: "../img/projects/aqra.png",
+        img: "https://mohamedabdelhakem17.github.io/portfolio/img/projects/aqra.png",
         link: "https://aqra.netlify.app/",
         githubLink: "https://github.com/MohamedAbdelhakem17/aqra",
         projectName: "AQRA"
