@@ -1,0 +1,303 @@
+/* Start Variable */
+:root {
+  --button-color: rgb(59, 160, 249);
+  --button-color-alt: rgb(12 144 255);
+  --title-color: rgb(242, 242, 242);
+  --text-color: rgb(191, 191, 191);
+  --body-color: rgb(11, 20, 30);
+  --container-color: rgb(20, 27, 35);
+  --border-color: rgb(70, 151, 217);
+}
+/* End Variable */
+
+/* Start Global Rules */
+*,
+*::after,
+*::before {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+/* End Global Rules */
+
+/* Start Header */
+.header {
+  padding: 20px;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.header .container .avtar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.header .container .avtar img {
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid var(--border-color);
+}
+
+.header .container .info {
+  text-align: center;
+}
+.header .container .info .name {
+  color: var(--title-color);
+  padding: 10px 10px 0px;
+  margin-top: 10px;
+}
+.header .container .info .title {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: -5px;
+}
+
+.header .container .links {
+  padding: 10px;
+}
+
+.header .container .links a {
+  color: var(--title-color);
+  font-size: 2rem;
+  padding: 5px 10px;
+  transition: color 300ms linear;
+}
+
+.header .container .links a:hover {
+  color: var(--button-color);
+}
+
+.header .container .contact {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.header .container .contact a:first-child {
+  padding: 15px 30px;
+  background-color: var(--button-color);
+  border-radius: 10px;
+  transition: background-color 300ms linear;
+  color: var(--title-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.header .container .contact a:first-child:hover {
+  background-color: var(--button-color-alt);
+}
+
+.header .container .contact a:last-child i {
+  color: var(--text-color);
+  background-color: rgb(19, 28, 39);
+  padding: 13px;
+  margin-left: 10px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  box-shadow: 0 0 1px 1px rgb(125, 123, 123);
+}
+
+/* End Header */
+
+/* Start content */
+.content {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.content .select-option {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--container-color);
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 10px 5px;
+}
+
+.content .select-option h2 {
+  color: white;
+  font-weight: 400;
+  padding: 20px 40px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.content .select-option h2.active {
+  background-color: var(--body-color);
+}
+
+.content .container {
+  width: 95%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.content .container .projects {
+  display: none;
+}
+
+.content .container .projects.active {
+  color: white;
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.content .container .projects .project {
+  width: calc((100% - 40px) / 3);
+  padding: 10px;
+}
+
+.content .container .projects .project .inner {
+  aspect-ratio: 2/1;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+.content .container .projects .project .inner .img {
+  width: 100%;
+}
+.content .container .projects .project .inner .img img {
+  width: 100%;
+  transition: transform 300ms linear;
+}
+
+.content .container .projects .project .inner:hover .img img {
+  transform: rotate(2deg) scale(1.1);
+}
+.content .container .projects .project .inner .info {
+  width: 100%;
+  height: 100%;
+  background-color: #0b141e66;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: opacity 300ms 200ms linear;
+}
+
+.content .container .projects .project .inner:hover .info {
+  opacity: 1;
+}
+.content .container .projects .project .inner .info h3 {
+  padding: 20px;
+  font-size: 3rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.content .container .projects .project .inner .info .links {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  right: 10px;
+}
+
+.content .container .projects .project .inner .info .links a i {
+  font-size: 2rem;
+  color: white;
+  margin-top: 30px;
+  padding: 10px;
+  transition: color 300ms linear;
+}
+
+.content .container .projects .project .inner .info .links a i:hover {
+  color: var(--button-color);
+}
+
+.content .container .skills {
+  display: none;
+}
+
+.content .container .skills.active {
+  color: white;
+  display: flex;
+  margin: 10px auto 0;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.content .container .skills .language,
+.content .container .skills .tools {
+  width: 45%;
+  background-color: var(--container-color);
+  padding: 20px;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.content .container .skills .language h3,
+.content .container .skills .tools h3 {
+  text-align: center;
+  font-size: 1.7rem;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.content .container .skills .language li,
+.content .container .skills .tools li {
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.content .container .skills .language li i,
+.content .container .skills .tools li i {
+  color: var(--button-color);
+  margin-right: 10px;
+}
+/* End content */
+/* Stat  media */
+
+@media (max-width: 1250px) {
+  .content .container {
+    width: 100%;
+  }
+  .content .container .projects .project {
+    width: calc((100% - 40px) / 2);
+  }
+  .content .container .skills.active {
+    width: 100%;
+  }
+}
+
+@media (max-width: 710px) {
+  .content .container .projects .project {
+    width: 100%;
+  }
+  .content .container .skills .language,
+  .content .container .skills .tools {
+    width: 90%;
+    margin: 0 auto 20px
+  }
+}
