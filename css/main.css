@@ -302,4 +302,7 @@ a {
   }
   .content .select-option {
     width: 350px; }
+
+  .header .container .contact a:first-child {
+    padding: 15px 20px; }
 }
