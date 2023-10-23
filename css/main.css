@@ -300,4 +300,6 @@ a {
     width: 90%;
     margin: 0 auto 20px
   }
+  .content .select-option {
+    width: 350px; }
 }
